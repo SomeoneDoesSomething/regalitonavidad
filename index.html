@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>meowmeowmeow</title>
+
+  <style>
+    body {
+      background-color: black;
+      color: pink;
+      font-family: inherit; /* keeps your default font */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      text-align: center;
+    }
+
+    .container {
+      border: 2px solid pink;
+      padding: 30px;
+      border-radius: 10px;
+      width: 350px;
+    }
+
+    input, button {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Revelar Regalo...</h2>
+
+    <input type="text" id="secretBox" placeholder="Revelar Regalo..." />
+    <button onclick="checkSecret()">Submit</button>
+
+    <p id="message" style="color:pink;"></p>
+
+    <script>
+      function checkSecret() {
+        const rightAnswer = "TE AMO"; // <- change to whatever you want
+        const userInput = document.getElementById("secretBox").value.trim();
+
+        if (userInput === rightAnswer) {
+          window.location.href = "1.html";
+        } else {
+          document.getElementById("message").textContent = "Incorrecto, pon todo en MAYUSUCULA";
+        }
+      }
+    </script>
+
+    <div style="margin-top:20px;">
+      <p>Pista 1: U -1</p>
+      <p>Pista 2: La portada del album popular de Ecco2k</p>
+      <p>Pista 3: El Epacio, con un A</p>
+      <p>Pista 4: Escribele a este numero en Whatsapp (+57 414 1361809)</p>
+    </div>
+  </div>
+
+</body>
+</html>
